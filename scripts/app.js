@@ -2,7 +2,7 @@ fnResize()
 window.onresize = function(){
   fnResize()
 }
-
+console.log(123)
 function fnResize() {
   var deviceWidth = document.documentElement.clientWidth || window.innerWidth
   if (deviceWidth >= 720) {
