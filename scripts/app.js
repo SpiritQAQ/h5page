@@ -1,4 +1,5 @@
 import Page from './page'
+import scss from "../scss/app.scss"
 
 let page = new Page(document.querySelector(".content")).launch()
 
