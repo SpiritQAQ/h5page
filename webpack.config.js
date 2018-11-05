@@ -82,7 +82,8 @@ module.exports = {
         template:"index.html" //指定模板
     })//在dist目录下自动生成index.html，指定其title
     ,
-    // new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin()    //11.5JS报错原因 心态崩了
+
 //     new ExtractTextPlugin({
 //       filename : "dist/style.css"
 //     })//提取出来的样式放在style.css文件中
