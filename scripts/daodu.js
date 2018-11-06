@@ -58,6 +58,7 @@ export default class Daodu {
       .then(()=>this.render())
     // this.getData()
     return this
+    console.log(this.URL)
 
 
   }

@@ -1,7 +1,10 @@
 import Daodu from './daodu' //导读
 import scss from "../scss/app.scss"
 
-let daodu = new Daodu(document.querySelector(".content"),"http://dev.xiaobuke.com/book/h5/detail/1671").launch()
+let bookid = location.search.split("=")[1]
+
+
+let daodu = new Daodu(document.querySelector(".content"),`http://dev.xiaobuke.com/book/h5/detail/${bookid}`).launch()
 
 fnResize()
 window.onresize = function(){
