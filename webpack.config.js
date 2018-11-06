@@ -56,15 +56,15 @@ module.exports = {
         {
           test: /\.(png|svg|jpg|gif)$/,
           use: [
-            'file-loader'
+            'url-loader?limit=8192&name=images/[hash:8].[name].[ext]'
           ]
         },
-        // {
-        //   test: /\.(html)$/,
-        //   use: {
-        //     loader: 'html-loader',
-        //   }
-        // },
+        {
+          test: /\.(html)$/,
+          use: {
+            loader: 'html-withimg-loader',
+          }
+        },
        {
          test: /\.scss$/, 
          loader: "style-loader!css-loader!sass-loader" 
