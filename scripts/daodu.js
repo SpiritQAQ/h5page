@@ -1,5 +1,6 @@
 import star1 from "../images/star1.png"
 import star2 from "../images/star2.png"
+import axios from "axios"
 
 export default class Daodu {
   constructor(el,URL){
@@ -50,17 +51,20 @@ export default class Daodu {
   }
 
   launch(){   //开始
-    fetch(this.URL)
-      .then(res => res.json())
-      // .then(data => this.data = data)
-      // .then(data => this.data = data.data)
-      .then(data => this.bookDetail = data.data.bookDetail)
+    // fetch(this.URL)
+    //   .then(res => res.json())
+    //   // .then(data => this.data = data)
+    //   // .then(data => this.data = data.data)
+    //   .then(data => this.bookDetail = data.data.bookDetail)
+    //   .then(()=>this.render())
+    // // this.getData()
+    // return this
+    // console.log(this.URL)
+    //以上是fetch，若兼容性有问题使用axios
+    axios.get(this.URL)
+      .then(res => this.bookDetail = res.data.data.bookDetail)
       .then(()=>this.render())
-    // this.getData()
-    return this
-    console.log(this.URL)
-
-
+      .catch(err => console.log(err))
   }
 
   render(){
