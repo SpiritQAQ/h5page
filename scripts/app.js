@@ -1,13 +1,12 @@
-import Page from './page'
+import Daodu from './daodu' //导读
 import scss from "../scss/app.scss"
 
-let page = new Page(document.querySelector(".content")).launch()
+let daodu = new Daodu(document.querySelector(".content")).launch()
 
 fnResize()
 window.onresize = function(){
   fnResize()
 }
-console.log(123)
 function fnResize() {
   var deviceWidth = document.documentElement.clientWidth || window.innerWidth
   if (deviceWidth >= 720) {
